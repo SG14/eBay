@@ -2,6 +2,7 @@ package scenario_Component;
 
 import generic_Component.BaseClass;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Map;
@@ -9,92 +10,144 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.ScreenOrientation;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import pageObject_Component.PageObjectCart;
+import pageObject_Component.PageObjectSearch;
+
 
 
 public class ScenarioBuy extends BaseClass{
-
-	public static Logger log = Logger.getLogger(ScenarioBuy.class);
-	SoftAssert sAssert = new SoftAssert();
+  
 	
+	//Logger is for Log4j report
+	public static Logger log = Logger.getLogger(ScenarioBuy.class);
+	
+	//Object Ref variable for PageObject component - class
+	PageObjectCart cartpageObject = new PageObjectCart(driver);
+
+	
+	//Method for Buying the item
 	@Test(dataProvider="dp_BuyNow",dataProviderClass=dataProvider_Component.DataProviderBuy.class)
-	public void testBuyNow(Map buy) throws MalformedURLException, InterruptedException
+	public void testBuyNow(Map buy) throws InterruptedException, IOException
 	{
-		String TC_ID = buy.get("TC_ID").toString();
+		//Collecting the data from the Map
+		String testCaseId = buy.get("TC_ID").toString();
 		String Search_Item = buy.get("Search_Item").toString();
 		String Exp_Result = buy.get("Exp_Result").toString();
 		
-//		Start_server();
-		log.info("Executing The TestCase" + TC_ID);
+		
+					
+		
+		
+		//start the appium server
+		//Start_server();
+		log.info("Executing The TestCase" + testCaseId);
 		Init_App();
 		
 		
-		PageObjectCart pob1 = new PageObjectCart(driver);
-		//ExplicitWait(pob.eBaySearch, 25);
+		System.out.println("Search for the shoes");
+		searchShoe1(Search_Item);
 		
+		System.out.println("Click on the desired shoe");
+		clickOnTheDesiredShoe();
 		
-		pob1.clicksearch();
+		System.out.println("Screen Rotation show cased");
+		ScreenRotation();
 		
-		ExplicitWait(pob1.ebaySearchtxtbox, 25);
-		pob1.enterSearchvalue(Search_Item);
+		System.out.println("Clicked on buy Button");
+		buyShoe();
 		
-		ExplicitWait(pob1.searchresult, 25);
-		List ele = pob1.sizeOfLoop();
-		
-		//for swipe action
-		//This will handle any screen size.
-		Dimension size = driver.manage().window().getSize();
-		int starty=(int)(size.height*0.90);
-		int endy=(int)(size.height*0.20);
-		int startx=(int)(size.width*0.50);
-		
-		do
-		{
-			if (ele.size()>0)
-				{
-				pob1.clickShoe();
-				log.info("Shoes found successfully, therefore breaking out of while loop");
-				break;
-				}
-			
-			
-		driver.swipe(startx, starty, startx, endy, 1000);
-		Thread.sleep(3000);
-		}while((pob1.ShoesArePresent).isDisplayed());
-	
-		//To showcase screen Orientation/Rotation
-		Thread.sleep(5000);
-		
-		driver.rotate(ScreenOrientation.LANDSCAPE);
-		Thread.sleep(5000);
-		driver.rotate(ScreenOrientation.PORTRAIT);
-		Thread.sleep(3000);
-		
-		pob1.sDropdown();
-		pob1.shoesize();
-		pob1.buybtn();
-		
-		ExplicitWait(pob1.DeliveryAddress, 25);
-		
-		if(pob1.DeliveryAddress.equals(Exp_Result))
-		{
-			log.info("Delivery Address page found");
-		}
-		else
-		{
-			log.info("Expected result and actual result are not same");
-			sAssert.fail("Failed due to expected and actual result not matching");
-		}
-		
-	
-	sAssert.assertAll();
+		validateDeliveryAddressScreen(Exp_Result,testCaseId);
+	    //Start_server();
 	
 	}
 	
 	
 	
+	public void searchShoe1(String Search_Item)
+	{
+		
+		
+		
+		PageObjectCart cartpageObject1 = new PageObjectCart(driver);
+		
+		
+		//click on the search text box in eBay
+		cartpageObject1.clicksearch();      					
+		ExplicitWait(cartpageObject1.ebaySearchtxtbox, 25);
+		
+		
+		 
+		
+		//enter the search vale and click on search button
+		cartpageObject1.enterSearchvalue(Search_Item);         
+		ExplicitWait(cartpageObject1.result, 25);
+		
+		 
+	}
 	
+	public void clickOnTheDesiredShoe()
+	{
+		PageObjectCart cartpageObject2 = new PageObjectCart(driver);
+		ExplicitWait(cartpageObject2.result, 30);
+		
+		//saving all the items matching the search criteria, ideally there will be 1
+		List<WebElement> sizeOfLoop = cartpageObject2.sizeOfLoop();
+		
+		
+		do{
+			if((sizeOfLoop.size())>0)
+			{   log.info("Shoes found successfully, therefore breaking out of while loop");
+			cartpageObject2.clickShoe();
+				break;
+			}
+			
+			//Vertical Scroll till the desired item is found
+			verticalScroll();
+			
+		}while((cartpageObject2.ShoesArePresent).isDisplayed());
+		
+		
+	}
+	
+	public void ScreenRotation() throws InterruptedException
+	{   //This is just to show case screen Orientation, therefore used Thread.sleep. In Real time use Implicit/Explicit wait
+		Thread.sleep(5000);
+		driver.rotate(ScreenOrientation.LANDSCAPE);
+		Thread.sleep(5000);
+		driver.rotate(ScreenOrientation.PORTRAIT);
+		Thread.sleep(3000);
+	}
+	
+	public void buyShoe()
+	{
+		PageObjectCart cartpageObject3 = new PageObjectCart(driver);
+		cartpageObject3.sDropdown(); 
+		cartpageObject3.shoesize(); 
+		cartpageObject3.buybtn(); 
+		
+	}
+	
+	public void validateDeliveryAddressScreen(String Exp_Result, String testCaseId) throws IOException
+	{
+		PageObjectCart cartpageObject4 = new PageObjectCart(driver);
+        ExplicitWait(cartpageObject4.deliveryAddress, 40); 
+     
+        
+      //Check if this page is the expected page as per excel sheet
+		if((cartpageObject4.getaddress()).equals(Exp_Result)) 
+		{
+			log.info("Delivery Address page found");
+			snapshot1(testCaseId);
+		}
+		else
+		{
+			log.info("Expected result = "+ Exp_Result +" and actual result =" +cartpageObject4.getaddress() +", Hence Fail");
+			
+			snapshot1(testCaseId);
+		}
+	}
 }

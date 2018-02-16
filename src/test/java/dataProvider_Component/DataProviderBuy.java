@@ -22,7 +22,7 @@ public class DataProviderBuy {
 			return obj.iterator();
 		}
 		
-		//getting the search data (Invalid)
+		//getting the Invalid search data -- Note code is written only for 1 valid search
 //		public void getBuyNowData2()
 //		{
 //			
@@ -41,13 +41,14 @@ public class DataProviderBuy {
 			
 			for(int i = 1;i<=getrowcount;i++)
 			{
+				//Reading the data from excel
 				String Search_Item = xl.Readvalue(Sheet2, i, "Search_Item");
 				String Exp_Result = xl.Readvalue(Sheet2, i, "Exp_Result");
 				String Script_name = xl.Readvalue(Sheet2, i, "Script_name");
 				
 				
 				if(Script_name.equals(scriptname))
-				{
+				{//Saving the data in Map
 					Map<String, String> dmap = new HashMap<String, String>();
 					for(int j=0;j<colcount;j++)
 					{
@@ -56,14 +57,15 @@ public class DataProviderBuy {
 						dmap.put(key, value);
 						
 					}
-					
+					//saving the map in Object Array
 					Object[] x = new Object[1];
 					x[0]=dmap;
+					//saving in list
 					arr_list.add(x);
 				}
 				
 			
-		}
+		}    //returning the entire List
 			return arr_list;
 
 	}

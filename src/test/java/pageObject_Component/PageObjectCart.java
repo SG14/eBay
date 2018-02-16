@@ -3,18 +3,14 @@ package pageObject_Component;
 import java.util.List;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.FieldDocument.Field.Xpath;
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
-public class PageObjectCart<WebElements> {
+public class PageObjectCart {
 
+	public AppiumDriver driver;
 
 	//1st Section - Initialize Page factory
 	public PageObjectCart(AppiumDriver driver)
@@ -24,17 +20,18 @@ public class PageObjectCart<WebElements> {
 	
 
 	//2nd Section - Collect the elements using @FindBy annotation
-	@FindBy(id="com.ebay.mobile:id/search_box")
-	public WebElement eBaySearch;
-	
-	
-	@FindBy(id="com.ebay.mobile:id/search_src_text")
-	public WebElement ebaySearchtxtbox;
-	
-	
-	@FindBy(id="com.ebay.mobile:id/search_src_text")
-	public WebElement searchresult;
-	
+		@FindBy(id="com.ebay.mobile:id/search_box")
+		public WebElement eBaySearch;
+		
+		@FindBy(id="com.ebay.mobile:id/search_src_text")
+		public WebElement ebaySearchtxtbox;
+		
+		@FindBy(id="com.ebay.mobile:id/search_src_text")
+		public WebElement searchresult;
+		
+		@FindBy(id="com.ebay.mobile:id/textview_item_count")
+		public WebElement result;
+			
 	@FindBy(id="com.ebay.mobile:id/cell_collection_item")
 	public WebElement ShoesArePresent;
 	
@@ -53,13 +50,14 @@ public class PageObjectCart<WebElements> {
 	@FindBy(id="com.ebay.mobile:id/button_bin")
 	public WebElement buyNow;
 	
-	@FindBy(xpath ="//*[@text='Delivery address'][@index='0']")
-	public WebElement DeliveryAddress;
 	
+	@FindBy(xpath ="//*[@text='Delivery address'][@index='0'][@class='android.view.View']")
+	public WebElement deliveryAddress;
+	
+
 	//3rd Section - performing action on the elements collected
-	
 	public void clicksearch()
-	{   System.out.println(eBaySearch.getText());
+	{   
 		eBaySearch.click();
 	}
 	public void enterSearchvalue(String value)
@@ -67,13 +65,9 @@ public class PageObjectCart<WebElements> {
 		ebaySearchtxtbox.sendKeys(value+"\n");
 	}
 	
-	
-	
 	public List<WebElement> sizeOfLoop()
 	{
-		
 		return collectForLoop;
-		
 	}
 	
 	public void clickShoe()
@@ -90,8 +84,14 @@ public class PageObjectCart<WebElements> {
 	{
 		selectsize.click();
 	}
+	
 	public void buybtn()
 	{
 		buyNow.click();
+	}
+	
+	public String getaddress()
+	{
+		return deliveryAddress.getText();
 	}
 }

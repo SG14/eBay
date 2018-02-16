@@ -10,6 +10,13 @@ public class PageObjectSearch {
 	
 	public AppiumDriver driver;
 	
+	//1st Section - Initialize Page factory
+		public PageObjectSearch(AppiumDriver driver)
+		{
+			PageFactory.initElements(driver, this);
+		}
+		
+		
 	
 	//2nd Section - Collect the elements using @FindBy annotation
 	@FindBy(id="com.ebay.mobile:id/search_box")
@@ -22,19 +29,14 @@ public class PageObjectSearch {
 	@FindBy(id="com.ebay.mobile:id/search_src_text")
 	public WebElement searchresult;
 	
+	@FindBy(id="com.ebay.mobile:id/textview_item_count")
+	public WebElement result;
 	
-	
-	
-	//1st Section - Initialize Page factory
-	public PageObjectSearch(AppiumDriver driver)
-	{
-		PageFactory.initElements(driver, this);
-	}
 	
 	
 	//3rd Section - performing action on the elements collected
 	public void clicksearch()
-	{   System.out.println(eBaySearch.getText());
+	{   
 		eBaySearch.click();
 	}
 	public void enterSearchvalue(String value)
@@ -45,7 +47,8 @@ public class PageObjectSearch {
 	
 	public String getsearchresultcount()
 	{
-		return searchresult.getText();
+			
+		return result.getText();
 	}
 	
 

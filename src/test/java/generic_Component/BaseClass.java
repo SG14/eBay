@@ -6,8 +6,11 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -22,7 +25,7 @@ public class BaseClass {
 	public static Process process;
 	public static AndroidDriver driver;
 	
-	//starting the app
+	//starting the appium
 	
 	public static void Start_server() throws IOException, InterruptedException
 	{
@@ -66,23 +69,40 @@ DesiredCapabilities capabilities= new DesiredCapabilities();
 		
 		
 		//appium server details
-		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+	 driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		
 		Thread.sleep(8000);
 	}
 
-	
+	//Explicit wait
 	public void ExplicitWait(WebElement ele, long t)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, t);
 		wait.until(ExpectedConditions.visibilityOf(ele)).isDisplayed();
+		System.out.println(ExpectedConditions.visibilityOf(ele));
 	}
 	
+	//For Swipe
+	public void verticalScroll()
+	{
+		Dimension size = driver.manage().window().getSize();
+		int starty=(int)(size.height*0.90);
+		int endy=(int)(size.height*0.20);
+		int startx=(int)(size.width*0.50);
+		driver.swipe(startx, starty, startx, endy, 1000);
+	}
+	
+	
+	//For Screenshot
 	public void snapshot1(String TC_ID) throws IOException
 	{
+		Date date= new Date();
+		SimpleDateFormat df= new SimpleDateFormat("yyyy-MM-dd hh-mm-ss");
+		File file= new File(df.format(date)+".png");
+		
 		TakesScreenshot screenshot = (TakesScreenshot)driver;
 		File screenshotAs = screenshot.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotAs, new File("D:\\EbayFramework\\ScreenShot"+TC_ID));
+		FileUtils.copyFile(screenshotAs, new File("D:\\EbayFramework\\ScreenShot\\ "+TC_ID+"-"+file));
 	}
 
 //*********************************
