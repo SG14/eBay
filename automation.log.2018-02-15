@@ -1,5 +1,5 @@
 2018-02-15 21:31:49 INFO  ScenarioBuy:28 - Executing The TestCaseEB_01
-2018-02-15 21:32:14 INFO  ScenarioBuy:69 - Expected result = 7,576 results and Actual result =7,576 results, Hence Pass
+2018-02-15 21:32:14 INFO  ScenarioBuy:69 - Delivery Address page found
 2018-02-15 23:08:54 INFO  ScenarioBuy:50 - Executing The TestCaseEBN_01
 2018-02-15 23:09:53 INFO  ScenarioBuy:100 - Shoes found successfully, therefore breaking out of while loop
 2018-02-15 23:10:17 INFO  ScenarioBuy:139 - Delivery Address page found
