@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="55377" started-at="2018-02-16T01:06:52Z" finished-at="2018-02-16T01:07:48Z">
+  <suite name="Default suite" duration-ms="56733" started-at="2018-02-16T16:57:42Z" finished-at="2018-02-16T16:58:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="55377" started-at="2018-02-16T01:06:52Z" finished-at="2018-02-16T01:07:48Z">
+    <test name="Default test" duration-ms="56733" started-at="2018-02-16T16:57:42Z" finished-at="2018-02-16T16:58:38Z">
       <class name="scenario_Component.ScenarioBuy">
-        <test-method status="PASS" signature="testBuyNow(java.util.Map)[pri:0, instance:scenario_Component.ScenarioBuy@86be70a]" name="testBuyNow" duration-ms="55097" started-at="2018-02-16T06:36:53Z" data-provider="dp_BuyNow" finished-at="2018-02-16T06:37:48Z">
+        <test-method status="PASS" signature="testBuyNow(java.util.Map)[pri:0, instance:scenario_Component.ScenarioBuy@86be70a]" name="testBuyNow" duration-ms="56494" started-at="2018-02-16T22:27:42Z" data-provider="dp_BuyNow" finished-at="2018-02-16T22:28:38Z">
           <params>
             <param index="0">
               <value>

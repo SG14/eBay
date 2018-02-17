@@ -6,15 +6,19 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
+
+import org.testng.asserts.SoftAssert;
 
 import pageObject_Component.PageObjectSearch;
 
 
 public class ScenarioSearch extends BaseClass {
 	
+	SoftAssert sAssert= new SoftAssert();	
 	//Logger is for Log4j report
 	public static Logger log = Logger.getLogger(ScenarioSearch.class);
 	
@@ -68,17 +72,23 @@ public class ScenarioSearch extends BaseClass {
 	public void validateShoeCount(String actualCount, String expectedCount, String testCaseId) throws IOException
 	{
 		//Actual result is checked with Expected result from Excel sheet
-				if(actualCount.equals(expectedCount))
-				{
-					log.info("Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Pass");
-					snapshot1(testCaseId);
-				}
-				else
-				{
-					log.info("Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Fail");
-					
-					snapshot1(testCaseId);
-				}
+		
+		snapshot1(testCaseId);
+		Assert.assertEquals(actualCount, expectedCount, "Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Fail");
+		
+		
+		
+//		if(actualCount.equals(expectedCount))
+//				{
+//					log.info("Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Pass");
+//					snapshot1(testCaseId);
+//				}
+//				else
+//				{
+//					log.info("Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Fail");
+//					
+//					snapshot1(testCaseId);
+//				}
 				
 	}
 	

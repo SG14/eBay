@@ -97,7 +97,7 @@ DesiredCapabilities capabilities= new DesiredCapabilities();
 	public void snapshot1(String TC_ID) throws IOException
 	{
 		Date date= new Date();
-		SimpleDateFormat df= new SimpleDateFormat("yyyy-MM-dd hh-mm-ss");
+		SimpleDateFormat df= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		File file= new File(df.format(date)+".png");
 		
 		TakesScreenshot screenshot = (TakesScreenshot)driver;

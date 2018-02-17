@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -138,16 +139,21 @@ public class ScenarioBuy extends BaseClass{
      
         
       //Check if this page is the expected page as per excel sheet
-		if((cartpageObject4.getaddress()).equals(Exp_Result)) 
-		{
-			log.info("Delivery Address page found");
-			snapshot1(testCaseId);
-		}
-		else
-		{
-			log.info("Expected result = "+ Exp_Result +" and actual result =" +cartpageObject4.getaddress() +", Hence Fail");
-			
-			snapshot1(testCaseId);
-		}
+        snapshot1(testCaseId);
+        Assert.assertEquals(cartpageObject4.getaddress(), Exp_Result, "Expected result = "+ Exp_Result +" and actual result =" +cartpageObject4.getaddress() +", Hence Fail");
+		
+        
+        
+//        if((cartpageObject4.getaddress()).equals(Exp_Result)) 
+//		{
+//			log.info("Delivery Address page found");
+//			snapshot1(testCaseId);
+//		}
+//		else
+//		{
+//			log.info("Expected result = "+ Exp_Result +" and actual result =" +cartpageObject4.getaddress() +", Hence Fail");
+//			
+//			snapshot1(testCaseId);
+//		}
 	}
 }

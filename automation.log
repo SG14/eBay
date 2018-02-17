@@ -3,3 +3,11 @@
 2018-02-16 06:36:53 INFO  ScenarioBuy:47 - Executing The TestCaseEBN_01
 2018-02-16 06:37:19 INFO  ScenarioBuy:103 - Shoes found successfully, therefore breaking out of while loop
 2018-02-16 06:37:45 INFO  ScenarioBuy:143 - Delivery Address page found
+2018-02-16 22:10:14 INFO  ScenarioSearch:39 - Executing The TestCaseEB_01
+2018-02-16 22:16:39 INFO  ScenarioSearch:39 - Executing The TestCaseEB_01
+2018-02-16 22:17:38 INFO  ScenarioSearch:39 - Executing The TestCaseEB_01
+2018-02-16 22:19:44 INFO  ScenarioSearch:39 - Executing The TestCaseEB_01
+2018-02-16 22:21:16 INFO  ScenarioSearch:39 - Executing The TestCaseEB_01
+2018-02-16 22:23:18 INFO  ScenarioSearch:39 - Executing The TestCaseEB_01
+2018-02-16 22:27:42 INFO  ScenarioBuy:48 - Executing The TestCaseEBN_01
+2018-02-16 22:28:08 INFO  ScenarioBuy:104 - Shoes found successfully, therefore breaking out of while loop
