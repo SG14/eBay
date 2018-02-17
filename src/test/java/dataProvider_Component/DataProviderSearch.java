@@ -46,7 +46,7 @@ public class DataProviderSearch {
 			//Reading the data from excel
 			//String Search_Item = xl.Readvalue(Sheet1, i, "Search_Item");
 			String Exp_Result = xl.Readvalue(Sheet1, i, "Exp_Result");
-			System.out.println(i+Exp_Result);
+			System.out.println(Exp_Result);
 			String Script_name = xl.Readvalue(Sheet1, i, "Script_name");
 			System.out.println(Script_name);
 			

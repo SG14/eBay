@@ -11,14 +11,14 @@ import org.testng.annotations.Test;
 
 
 
-import org.testng.asserts.SoftAssert;
+
 
 import pageObject_Component.PageObjectSearch;
 
 
 public class ScenarioSearch extends BaseClass {
 	
-	SoftAssert sAssert= new SoftAssert();	
+	
 	//Logger is for Log4j report
 	public static Logger log = Logger.getLogger(ScenarioSearch.class);
 	
@@ -43,6 +43,7 @@ public class ScenarioSearch extends BaseClass {
 			System.out.println("Search for the shoes");
 			String shoecount = searchShoe(Search_Item);
 			validateShoeCount(shoecount,Exp_Result,testCaseId);
+			
 		
 		//Stop_server();
 		
@@ -67,13 +68,14 @@ public class ScenarioSearch extends BaseClass {
 		//Returning the search result count to validate
 		return searchpageObject.getsearchresultcount();	
 		
+		
 	}
 	
 	public void validateShoeCount(String actualCount, String expectedCount, String testCaseId) throws IOException
 	{
 		//Actual result is checked with Expected result from Excel sheet
 		
-		snapshot1(testCaseId);
+		
 		Assert.assertEquals(actualCount, expectedCount, "Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Fail");
 		
 		

@@ -47,7 +47,7 @@ public class PageObjectSearch {
 	
 	public String getsearchresultcount()
 	{
-			
+			System.out.println(result.getText());
 		return result.getText();
 	}
 	

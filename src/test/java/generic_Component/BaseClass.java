@@ -79,7 +79,7 @@ DesiredCapabilities capabilities= new DesiredCapabilities();
 	{
 		WebDriverWait wait = new WebDriverWait(driver, t);
 		wait.until(ExpectedConditions.visibilityOf(ele)).isDisplayed();
-		System.out.println(ExpectedConditions.visibilityOf(ele));
+		
 	}
 	
 	//For Swipe
