@@ -18,8 +18,9 @@
     
      <classes>
             
-            <class  name="Scenario_Component.Scenario_Search" />
-            
+            <class  name="Scenario_Component.ScenarioSearch" />
+            <class  name="Scenario_Component.ScenarioBuy" />
+    
        </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

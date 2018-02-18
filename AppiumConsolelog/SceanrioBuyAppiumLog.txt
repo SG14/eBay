@@ -1,0 +1,629 @@
+[RemoteTestNG] detected TestNG version 6.8.0
+[TestNG] Running:
+  C:\Users\shail\AppData\Local\Temp\testng-eclipse--454696887\testng-customsuite.xml
+
+Started the Appium Server
+[36minfo[39m: Welcome to Appium v1.4.16 (REV ae6877eff263066b26328d457bd285c0cc62430d)
+[36minfo[39m: Appium REST http interface listener started on 0.0.0.0:4723
+[36minfo[39m: Console LogLevel: debug
+2018-02-18 18:46:37 INFO  ScenarioBuy:48 - Executing The TestCaseEBN_01
+Inside Init app
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m [90m{"desiredCapabilities":{"appPackage":"com.ebay.mobile","appActivity":"com.ebay.mobile.activities.MainActivity","platformName":"Android","deviceName":"MI 3W","platformVersion":"6.0.1"}}[39m
+[36minfo[39m: Client User-Agent string: Apache-HttpClient/4.3.3 (java 1.5)
+[36minfo[39m: [debug] Didn't get app but did get Android package, will attempt to launch it on the device
+[36minfo[39m: [debug] Creating new appium session bffbb6a4-747d-403e-b5e3-f90920ad76c0
+[36minfo[39m: Starting android appium
+[36minfo[39m: [debug] Getting Java version
+[36minfo[39m: Java version is: 1.8.0_51
+[36minfo[39m: [debug] Checking whether adb is present
+[36minfo[39m: [debug] Using adb from C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe
+[33mwarn[39m: No app capability, can't parse package/activity
+[36minfo[39m: [debug] Using fast reset? true
+[36minfo[39m: [debug] Preparing device for session
+[36minfo[39m: [debug] Not checking whether app is present since we are assuming it's already on the device
+[36minfo[39m: Retrieving device
+[36minfo[39m: [debug] Trying to find a connected android device
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe devices
+[36minfo[39m: [debug] 1 device(s) connected
+[36minfo[39m: Found device d26b94e
+[36minfo[39m: [debug] Setting device id to d26b94e
+[36minfo[39m: [debug] Waiting for device to be ready and to respond to shell commands (timeout = 5)
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e wait-for-device
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell "echo 'ready'"
+[36minfo[39m: [debug] Starting logcat capture
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 23
+[36minfo[39m: Device API level is: 23
+[36minfo[39m: [debug] Extracting strings for language: default
+[36minfo[39m: [debug] Apk doesn't exist locally
+[36minfo[39m: [debug] Could not get strings, but it looks like we had an old strings file anyway, so ignoring
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell "rm -rf /data/local/tmp/strings.json"
+[36minfo[39m: [debug] Not uninstalling app since server not started with --full-reset
+[36minfo[39m: [debug] Skipping install since we launched with a package instead of an app path
+[36minfo[39m: [debug] Forwarding system:4724 to device:4724
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e forward tcp:4724 tcp:4724
+[36minfo[39m: [debug] Pushing appium bootstrap to device...
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e push "D:\\Appium\\node_modules\\appium\\build\\android_bootstrap\\AppiumBootstrap.jar" /data/local/tmp/
+[36minfo[39m: [debug] Pushing settings apk to device...
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e install "D:\Appium\node_modules\appium\build\settings_apk\settings_apk-debug.apk"
+[36minfo[39m: [debug] Pushing unlock helper app to device...
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e install "D:\Appium\node_modules\appium\build\unlock_apk\unlock_apk-debug.apk"
+[36minfo[39m: Starting App
+[36minfo[39m: [debug] Attempting to kill all 'uiautomator' processes
+[36minfo[39m: [debug] Getting all processes with 'uiautomator'
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell "ps 'uiautomator'"
+[36minfo[39m: [debug] No matching processes found
+[36minfo[39m: [debug] Running bootstrap
+[36minfo[39m: [debug] spawning: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell uiautomator runtest AppiumBootstrap.jar -c io.appium.android.bootstrap.Bootstrap -e pkg com.ebay.mobile -e disableAndroidWatchers false
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] io.appium.android.bootstrap.Bootstrap:[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 1[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Socket opened on port 4724
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Appium Socket Server Ready
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Loading json...
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Registered crash watchers.
+[36minfo[39m: [debug] Waking up device if it's not alive
+[36minfo[39m: [debug] Pushing command to appium work queue: ["wake",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Client connected
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"wake","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: wake
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell "dumpsys window"
+[36minfo[39m: [debug] Screen already unlocked, continuing.
+[36minfo[39m: [debug] Pushing command to appium work queue: ["getDataDir",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"getDataDir","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getDataDir
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"\/data\/local\/tmp"}
+[36minfo[39m: [debug] dataDir set to: /data/local/tmp
+[36minfo[39m: [debug] Pushing command to appium work queue: ["compressedLayoutHierarchy",{"compressLayout":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"compressedLayoutHierarchy","params":{"compressLayout":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: compressedLayoutHierarchy
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":false}
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 23
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.ebay.mobile/com.ebay.mobile.activities.MainActivity"
+[36minfo[39m: [debug] Waiting for pkg "com.ebay.mobile" and activity "com.ebay.mobile.activities.MainActivity" to be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell "dumpsys window windows"
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell "getprop ro.build.version.release"
+[36minfo[39m: [debug] Device is at release version 6.0.1
+[36minfo[39m: [debug] Device launched! Ready for commands
+[36minfo[39m: [debug] Setting command timeout to the default of 60 secs
+[36minfo[39m: [debug] Appium session started with sessionId bffbb6a4-747d-403e-b5e3-f90920ad76c0
+[36minfo[39m: [37m<-- POST /wd/hub/session [39m[36m303[39m[90m 5276.060 ms - 74[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0[39m [90m{}[39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"6.0.1","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.ebay.mobile","appActivity":"com.ebay.mobile.activities.MainActivity","platformName":"Android","deviceName":"MI 3W","platformVersion":"6.0.1"},"appPackage":"com.ebay.mobile","appActivity":"com.ebay.mobile.activities.MainActivity","platformName":"Android","deviceName":"d26b94e"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0 [39m[32m200[39m[90m 4.034 ms - 623[39m [90m{"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"6.0.1","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.ebay.mobile","appActivity":"com.ebay.mobile.activities.MainActivity","platformName":"Android","deviceName":"MI 3W","platformVersion":"6.0.1"},"appPackage":"com.ebay.mobile","appActivity":"com.ebay.mobile.activities.MainActivity","platformName":"Android","deviceName":"d26b94e"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+Search for the shoes
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"id","value":"com.ebay.mobile:id/search_box"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ebay.mobile:id/search_box","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ebay.mobile:id/search_box","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/search_box using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/search_box]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"1"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 217.761 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"1"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/1/click[39m [90m{"id":"1"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"1"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"1"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/1/click [39m[32m200[39m[90m 202.961 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"id","value":"com.ebay.mobile:id/search_src_text"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ebay.mobile:id/search_src_text","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ebay.mobile:id/search_src_text","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/search_src_text using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/search_src_text]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"2"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"2"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 1258.947 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"2"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/2/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"2","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"2","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/2/displayed [39m[32m200[39m[90m 59.601 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"id","value":"com.ebay.mobile:id/search_src_text"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ebay.mobile:id/search_src_text","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ebay.mobile:id/search_src_text","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/search_src_text using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/search_src_text]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"3"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"3"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 54.375 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"3"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/3/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"3","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"3","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/3/displayed [39m[32m200[39m[90m 19.793 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"id","value":"com.ebay.mobile:id/search_src_text"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ebay.mobile:id/search_src_text","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ebay.mobile:id/search_src_text","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/search_src_text using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/search_src_text]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"4"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"4"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 18.490 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"4"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/4/value[39m [90m{"id":"4","value":["Reebok Shoes\n"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"4","text":"Reebok Shoes\n","replace":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"4","text":"Reebok Shoes\n","replace":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text remains after clearing, but it appears to be hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text not cleared. Assuming remainder is hint text.
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] [APPIUM-UIAUTO] [debug] Sending plain text to element: Reebok Shoes[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] [/APPIUM-UIAUTO][39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/4/value [39m[32m200[39m[90m 6492.994 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"id","value":"com.ebay.mobile:id/textview_item_count"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ebay.mobile:id/textview_item_count","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ebay.mobile:id/textview_item_count","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/textview_item_count using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/textview_item_count]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/textview_item_count using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/textview_item_count]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"No element found"}
+[36minfo[39m: [debug] Condition unmet after 604ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 608.836 ms - 195[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"id","value":"com.ebay.mobile:id/textview_item_count"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ebay.mobile:id/textview_item_count","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ebay.mobile:id/textview_item_count","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/textview_item_count using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/textview_item_count]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/textview_item_count using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/textview_item_count]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"5"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"5"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 1087.605 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"5"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/5/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"5","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"5","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/5/displayed [39m[32m200[39m[90m 29.789 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"id","value":"com.ebay.mobile:id/textview_item_count"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ebay.mobile:id/textview_item_count","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ebay.mobile:id/textview_item_count","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/textview_item_count using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/textview_item_count]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"6"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"6"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 27.465 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"6"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/6/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"6","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"6","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/6/displayed [39m[32m200[39m[90m 25.416 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+Click on the desired shoe
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"id","value":"com.ebay.mobile:id/textview_item_count"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ebay.mobile:id/textview_item_count","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ebay.mobile:id/textview_item_count","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/textview_item_count using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/textview_item_count]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"7"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"7"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 24.331 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"7"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/7/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"7","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"7","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/7/displayed [39m[32m200[39m[90m 23.642 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"id","value":"com.ebay.mobile:id/textview_item_count"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ebay.mobile:id/textview_item_count","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ebay.mobile:id/textview_item_count","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/textview_item_count using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/textview_item_count]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"8"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"8"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 28.287 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"8"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/8/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"8","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"8","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/8/displayed [39m[32m200[39m[90m 25.593 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/elements[39m [90m{"using":"xpath","value":"//*[@text='REEBOK M49324'][@index='0']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='REEBOK M49324'][@index='0']","context":"","multiple":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='REEBOK M49324'][@index='0']","context":"","multiple":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='REEBOK M49324'][@index='0'] using XPATH with the contextId:  multiple: true
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=7]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] getElements selector:UiSelector[CLASS=android.widget.TextView, INSTANCE=7]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Selector ends with instance.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"9"}]}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":[{"ELEMENT":"9"}],"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/elements [39m[32m200[39m[90m 195.245 ms - 89[39m [90m{"status":0,"value":[{"ELEMENT":"9"}],"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+2018-02-18 18:47:02 INFO  ScenarioBuy:104 - Shoes found successfully, therefore breaking out of while loop
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='REEBOK M49324'][@index='0']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='REEBOK M49324'][@index='0']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='REEBOK M49324'][@index='0']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='REEBOK M49324'][@index='0'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=7]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"10"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"10"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 173.649 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"10"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/10/click[39m [90m{"id":"10"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"10"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"10"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/10/click [39m[32m200[39m[90m 464.612 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+Screen Rotation show cased
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/orientation[39m [90m{"orientation":"LANDSCAPE"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["orientation",{"orientation":"LANDSCAPE"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"orientation","params":{"orientation":"LANDSCAPE"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: orientation
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Desired orientation: LANDSCAPE
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Current rotation: ROTATION_0
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"Rotation (LANDSCAPE) successful."}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"Rotation (LANDSCAPE) successful.","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/orientation [39m[32m200[39m[90m 26.333 ms - 106[39m [90m{"status":0,"value":"Rotation (LANDSCAPE) successful.","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/orientation[39m [90m{"orientation":"PORTRAIT"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["orientation",{"orientation":"PORTRAIT"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"orientation","params":{"orientation":"PORTRAIT"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: orientation
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Desired orientation: PORTRAIT
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Current rotation: ROTATION_270
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"Rotation (PORTRAIT) successful."}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"Rotation (PORTRAIT) successful.","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/orientation [39m[32m200[39m[90m 25.304 ms - 105[39m [90m{"status":0,"value":"Rotation (PORTRAIT) successful.","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+Clicked on buy Button
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@index='0'][@text='Select']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@index='0'][@text='Select']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@index='0'][@text='Select']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@index='0'][@text='Select'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=7]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"11"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"11"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 207.472 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"11"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/11/click[39m [90m{"id":"11"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"11"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"11"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/11/click [39m[32m200[39m[90m 325.371 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@index='0'][@text='13.5']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@index='0'][@text='13.5']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@index='0'][@text='13.5']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@index='0'][@text='13.5'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=1]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"12"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"12"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 708.438 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"12"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/12/click[39m [90m{"id":"12"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"12"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"12"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/12/click [39m[32m200[39m[90m 144.776 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"id","value":"com.ebay.mobile:id/button_bin"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ebay.mobile:id/button_bin","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ebay.mobile:id/button_bin","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ebay.mobile:id/button_bin using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ebay.mobile:id/button_bin]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"13"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"13"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 1138.344 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"13"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/13/click[39m [90m{"id":"13"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"13"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"13"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/13/click [39m[32m200[39m[90m 233.477 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[36minfo[39m: [debug] Condition unmet after 265ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 270.815 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[36minfo[39m: [debug] Condition unmet after 96ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 98.507 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[36minfo[39m: [debug] Condition unmet after 84ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 87.106 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[36minfo[39m: [debug] Condition unmet after 126ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 128.079 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[36minfo[39m: [debug] Condition unmet after 102ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 102.795 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[36minfo[39m: [debug] Condition unmet after 86ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 89.135 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[36minfo[39m: [debug] Condition unmet after 116ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 119.718 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[36minfo[39m: [debug] Condition unmet after 102ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 104.478 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[36minfo[39m: [debug] Condition unmet after 95ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 96.939 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[36minfo[39m: [debug] Condition unmet after 98ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[31m500[39m[90m 100.574 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.view.View, INSTANCE=9]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"14"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"14"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 912.685 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"14"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/14/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"14","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"14","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/14/displayed [39m[32m200[39m[90m 554.825 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.view.View, INSTANCE=9]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"15"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"15"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 543.889 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"15"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/15/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"15","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"15","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/15/displayed [39m[32m200[39m[90m 44.950 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.view.View, INSTANCE=9]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"16"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"16"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 817.860 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"16"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/16/text[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getText",{"elementId":"16"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getText","params":{"elementId":"16"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"Delivery address"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"Delivery address","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/16/text [39m[32m200[39m[90m 49.285 ms - 90[39m [90m{"status":0,"value":"Delivery address","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+Delivery address
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/screenshot[39m [90m{}[39m
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e shell "/system/bin/rm /data/local/tmp/screenshot.png; /system/bin/screencap -p /data/local/tmp/screenshot.png "
+[36minfo[39m: [debug] executing cmd: C:\Users\shail\AppData\Local\Android\android-sdk\platform-tools\adb.exe -s d26b94e pull /data/local/tmp/screenshot.png "C:\\Users\\shail\\AppData\\Local\\Temp\\appium118118-8928-1yznhsy.png"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3Xd4VFX+x/HPTCYJqSSh10DoBEIIivQiCth7rygiqIAIur/dde1rFysoNhAVO1hREVeUrnQSIKFDaCEFSG8zvz9ChkzupJFJufJ+PQ+PO2fO3HvuTMhyP3PO91h04dcOAQAAAAAAmJi1rgcAAAAAAABQXQQcAAAAAADA9Ag4AAAAAACA6RFwAAAAAAAA0yPgAAAAAAAApkfAAQAAAAAATI+AAwAAAAAAmB4BBwAAAAAAMD0CDgAAAAAAYHoEHAAAAAAAwPQIOAAAAAAAgOkRcAAAAAAAANMj4AAAAAAAAKZnq+sBAAAAAICnhAX56NrBLXVOl1C1aeynIH+bHA4pPbtAicnZWrUtTV8sO6jU9DyX1109qKWmXtFRv248qofnbq2j0QOoDosu/NpR14MAAAAAUP+teXWoJGn2L/s04/vddTwaV34+Xpp2VUddeFYzedss5fbNK7Dr+z+P6OUFO5WdV6irB7XUP67uJItFys4t1OCHltXSqE9PoF/R99QZ2QV1PJLK6dwqUK+P76lGwT41do7kE3l6Yl68VmxNrbFzlGaxSD3bBWvT7hO1dk6UjxkcAAAAAKpkzPlt1SzEV499HC+7o+6/L+3YMkCvjuupZqG+lervY7PqygEt1L9rqH5am6Tbz2sri0UqKHTo6c+31/BoK8dqsahL60Cd3TlEXVsHKbypn1o1auAMN4qlZxfoQHKO9h3N1pZ96VqzPU0JBzLrxeciSb3aN9Qrd/dQkF/N3no2DvbRIzd20ej/rKzR85R07eBWyswpJOCoR5jBAQAAAKBSimdwFFu1LU1T341Vbr69jkYktW3ip9lTYtQw4NQN9JG0XH296pCWxqZox6FM+XpbFd7UXwO7h+nSc5qrRVgDw3EKCh16fF68flxzpDaHbxAZHqSLzm6uUTFN...","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/screenshot [39m[32m200[39m[90m 2137.742 ms - 184694[39m [90m{"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3Xd4VFX+x/HPTCYJqSSh10DoBEIIivQiCth7rygiqIAIur/dde1rFysoNhAVO1hREVeUrnQSIKFDaCEFSG8zvz9ChkzupJFJufJ+PQ+PO2fO3HvuTMhyP3PO91h04dcOAQAAAAAAmJi1rgcAAAAAAABQXQQcAAAAAADA9Ag4AAAAAACA6RFwAAAAAAAA0yPgAAAAAAAApkfAAQAAAAAATI+AAwAAAAAAmB4BBwAAAAAAMD0CDgAAAAAAYHoEHAAAAAAAwPQIOAAAAAAAgOkRcAAAAAAAANMj4AAAAAAAAKZnq+sBAAAAAICnhAX56NrBLXVOl1C1aeynIH+bHA4pPbtAicnZWrUtTV8sO6jU9DyX1109qKWmXtFRv248qofnbq2j0QOoDosu/NpR14MAAAAAUP+teXWoJGn2L/s04/vddTwaV34+Xpp2VUddeFYzedss5fbNK7Dr+z+P6OUFO5WdV6irB7XUP67uJItFys4t1OCHltXSqE9PoF/R99QZ2QV1PJLK6dwqUK+P76lGwT41do7kE3l6Yl68VmxNrbFzlGaxSD3bBWvT7hO1dk6UjxkcAAAAAKpkzPlt1SzEV499HC+7o+6/L+3YMkCvjuupZqG+lervY7PqygEt1L9rqH5am6Tbz2sri0UqKHTo6c+31/BoK8dqsahL60Cd3TlEXVsHKbypn1o1auAMN4qlZxfoQHKO9h3N1pZ96VqzPU0JBzLrxeciSb3aN9Qrd/dQkF/N3no2DvbRIzd20ej/rKzR85R07eBWyswpJOCoR5jBAQAAAKBSimdwFFu1LU1T341Vbr69jkYktW3ip9lTYtQw4NQN9JG0XH296pCWxqZox6FM+XpbFd7UXwO7h+nSc5qrRVgDw3EKCh16fF68flxzpDaHbxAZHqSLzm6uUTFN...","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.view.View, INSTANCE=10]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"17"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"17"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 248.463 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"17"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/17/text[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getText",{"elementId":"17"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getText","params":{"elementId":"17"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"Delivery address"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"Delivery address","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/17/text [39m[32m200[39m[90m 34.885 ms - 90[39m [90m{"status":0,"value":"Delivery address","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element[39m [90m{"using":"xpath","value":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text='Delivery address'][@index='0'][@class='android.view.View']","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@text='Delivery address'][@index='0'][@class='android.view.View'] using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.view.View, INSTANCE=10]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"18"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"18"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element [39m[32m200[39m[90m 205.184 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"18"},"sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/18/text[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getText",{"elementId":"18"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getText","params":{"elementId":"18"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"Delivery address"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"Delivery address","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/bffbb6a4-747d-403e-b5e3-f90920ad76c0/element/18/text [39m[32m200[39m[90m 34.115 ms - 90[39m [90m{"status":0,"value":"Delivery address","sessionId":"bffbb6a4-747d-403e-b5e3-f90920ad76c0"}[39m
+Stopping the appium Server
+Stopped the appium Server
+PASSED: testBuyNow({Execute_Flag=Y, TC_ID=EBN_01, Script_name=BuyNow, Search_Item=Reebok Shoes, Exp_Result=Delivery address, Order_Set=1.0})
+
+===============================================
+    Default test
+    Tests run: 1, Failures: 0, Skips: 0
+===============================================
+
+
+===============================================
+Default suite
+Total tests run: 1, Failures: 0, Skips: 0
+===============================================
+
+[TestNG] Time taken by org.testng.reporters.SuiteHTMLReporter@506e6d5e: 17 ms
+[TestNG] Time taken by org.testng.reporters.jq.Main@4411d970: 31 ms
+[TestNG] Time taken by org.testng.reporters.XMLReporter@6aaa5eb0: 4 ms
+[TestNG] Time taken by [FailedReporter passed=0 failed=0 skipped=0]: 0 ms
+[TestNG] Time taken by org.testng.reporters.EmailableReporter@5ebec15: 3 ms
+[TestNG] Time taken by org.testng.reporters.JUnitReportReporter@3cda1055: 2 ms

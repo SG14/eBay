@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="scenario_Component.ScenarioSearch">
+      <class name="scenario_Component.ScenarioBuy">
         <methods>
-          <include name="testValidSearch" invocation-numbers="0"/>
+          <include name="testBuyNow" invocation-numbers="0"/>
         </methods>
-      </class> <!-- scenario_Component.ScenarioSearch -->
+      </class> <!-- scenario_Component.ScenarioBuy -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

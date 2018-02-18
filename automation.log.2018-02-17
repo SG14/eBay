@@ -1,0 +1,3 @@
+2018-02-17 08:35:24 INFO  ScenarioSearch:39 - Executing The TestCaseEB_01
+2018-02-17 08:36:31 INFO  ScenarioBuy:48 - Executing The TestCaseEBN_01
+2018-02-17 08:36:56 INFO  ScenarioBuy:104 - Shoes found successfully, therefore breaking out of while loop

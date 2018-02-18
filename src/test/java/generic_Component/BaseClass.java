@@ -33,7 +33,7 @@ public class BaseClass {
 
 	        pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
 	        pb.redirectError(ProcessBuilder.Redirect.INHERIT);
-	        Process process = pb.start();
+	        process = pb.start();
 			
 			if(process!=null)
 			{
@@ -94,15 +94,16 @@ DesiredCapabilities capabilities= new DesiredCapabilities();
 	
 	
 	//For Screenshot
-	public void snapshot1(String TC_ID) throws IOException
+	public void snapshot1(String TC_ID, AndroidDriver driver) throws IOException
 	{
 		Date date= new Date();
-		SimpleDateFormat df= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		SimpleDateFormat df= new SimpleDateFormat("yyyy-MM-dd hh-mm-ss");
 		File file= new File(df.format(date)+".png");
 		
 		TakesScreenshot screenshot = (TakesScreenshot)driver;
 		File screenshotAs = screenshot.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotAs, new File("D:\\EbayFramework\\ScreenShot\\ "+TC_ID+"-"+file));
+		String filePath = "D:\\EbayFramework\\ScreenShot\\"+TC_ID+"-"+file;
+		FileUtils.copyFile(screenshotAs, new File(filePath));
 	}
 
 //*********************************
@@ -111,11 +112,14 @@ DesiredCapabilities capabilities= new DesiredCapabilities();
 	{
 		if(process!=null)
 		{
+			System.out.println("Stopping the appium Server");
 			Thread.sleep(4000);
 			process.destroy();
 			System.out.println("Stopped the appium Server");
 			
 		}
+		else
+		System.out.println("Process is null");
 		
 	}
 	

@@ -1,3 +1,4 @@
-2018-02-17 08:35:24 INFO  ScenarioSearch:39 - Executing The TestCaseEB_01
-2018-02-17 08:36:31 INFO  ScenarioBuy:48 - Executing The TestCaseEBN_01
-2018-02-17 08:36:56 INFO  ScenarioBuy:104 - Shoes found successfully, therefore breaking out of while loop
+2018-02-18 18:34:24 INFO  ScenarioSearch:44 - Executing The TestCaseEB_01
+2018-02-18 18:34:49 INFO  ScenarioSearch:91 - Expected result = 7,558 results and Actual result =7,469 results, Hence Fail
+2018-02-18 18:46:37 INFO  ScenarioBuy:48 - Executing The TestCaseEBN_01
+2018-02-18 18:47:02 INFO  ScenarioBuy:104 - Shoes found successfully, therefore breaking out of while loop

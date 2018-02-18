@@ -5,9 +5,14 @@ import generic_Component.BaseClass;
 import java.io.IOException;
 import java.util.Map;
 
+import junit.framework.ComparisonFailure;
+
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+
+
 
 
 
@@ -27,7 +32,7 @@ public class ScenarioSearch extends BaseClass {
 	
 	//Method for Buying the item
 		@Test(dataProvider="dp_validSearch",dataProviderClass=dataProvider_Component.DataProviderSearch.class)
-		public void testValidSearch(Map search) throws InterruptedException, IOException
+		public void testValidSearch(Map search) throws Exception
 		{
 			
 			//Collecting the data from the Map
@@ -35,17 +40,17 @@ public class ScenarioSearch extends BaseClass {
 			String Search_Item = search.get("Search_Item").toString();
 			String Exp_Result = search.get("Exp_Result").toString();
 			//start the appium server
-			//Start_server();
+			Start_server();
 			log.info("Executing The TestCase" + testCaseId);
 			Init_App();
 			
 			
-			System.out.println("Search for the shoes");
+			//System.out.println("Search for the shoes");
 			String shoecount = searchShoe(Search_Item);
 			validateShoeCount(shoecount,Exp_Result,testCaseId);
 			
 		
-		//Stop_server();
+		Stop_server();
 		
 		
 	}
@@ -71,27 +76,26 @@ public class ScenarioSearch extends BaseClass {
 		
 	}
 	
-	public void validateShoeCount(String actualCount, String expectedCount, String testCaseId) throws IOException
+	public void validateShoeCount(String actualCount, String expectedCount, String testCaseId) throws Exception
 	{
 		//Actual result is checked with Expected result from Excel sheet
 		
 		
-		Assert.assertEquals(actualCount, expectedCount, "Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Fail");
 		
+		try{
+			Assert.assertEquals(actualCount, expectedCount, "Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Fail");
 		
-		
-//		if(actualCount.equals(expectedCount))
-//				{
-//					log.info("Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Pass");
-//					snapshot1(testCaseId);
-//				}
-//				else
-//				{
-//					log.info("Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Fail");
-//					
-//					snapshot1(testCaseId);
-//				}
-				
+		}
+		catch (AssertionError e) {
+			System.out.println("Catch block starts here");
+			log.info("Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Fail");
+			snapshot1(testCaseId, driver); throw e;
+			
+		}	
+		finally{
+			System.out.println("Finally block starts here");
+			Stop_server();}
+
 	}
 	
 	

@@ -44,7 +44,7 @@ public class ScenarioBuy extends BaseClass{
 		
 		
 		//start the appium server
-		//Start_server();
+		Start_server();
 		log.info("Executing The TestCase" + testCaseId);
 		Init_App();
 		
@@ -62,7 +62,7 @@ public class ScenarioBuy extends BaseClass{
 		buyShoe();
 		
 		validateDeliveryAddressScreen(Exp_Result,testCaseId);
-	    //Start_server();
+	    Stop_server();
 	
 	}
 	
@@ -132,28 +132,25 @@ public class ScenarioBuy extends BaseClass{
 		
 	}
 	
-	public void validateDeliveryAddressScreen(String Exp_Result, String testCaseId) throws IOException
+	public void validateDeliveryAddressScreen(String Exp_Result, String testCaseId) throws IOException, InterruptedException
 	{
 		PageObjectCart cartpageObject4 = new PageObjectCart(driver);
         ExplicitWait(cartpageObject4.deliveryAddress, 40); 
      
-        
+        System.out.println(cartpageObject4.getaddress());
+        snapshot1(testCaseId, driver);
       //Check if this page is the expected page as per excel sheet
-        snapshot1(testCaseId);
-        Assert.assertEquals(cartpageObject4.getaddress(), Exp_Result, "Expected result = "+ Exp_Result +" and actual result =" +cartpageObject4.getaddress() +", Hence Fail");
-		
-        
-        
-//        if((cartpageObject4.getaddress()).equals(Exp_Result)) 
-//		{
-//			log.info("Delivery Address page found");
-//			snapshot1(testCaseId);
-//		}
-//		else
-//		{
-//			log.info("Expected result = "+ Exp_Result +" and actual result =" +cartpageObject4.getaddress() +", Hence Fail");
-//			
-//			snapshot1(testCaseId);
-//		}
+        try{
+        	 Assert.assertEquals(cartpageObject4.getaddress(), Exp_Result, "Expected result = "+ Exp_Result +" and actual result =" +cartpageObject4.getaddress() +", Hence Fail");
+        }
+        catch(AssertionError e){
+        	
+        	snapshot1(testCaseId, driver);
+        	throw e;
+        }
+        finally{
+			System.out.println("Finally block starts here");
+			Stop_server();}
+
 	}
 }
