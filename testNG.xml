@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Decbatch">
-<listeners> 
-<listener class-name="org.uncommons.reportng.HTMLReporter"/>
- <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-</listeners>
+<suite name="eBayAssignment">
+
 
     <test name="RegSet1">
       
      <groups>
       <run>
 
-     <include name="smoke"/>
-     <exclude name="regression"/>
+     <include name="eBay"/>
+
      
       </run>
       </groups>  
     
      <classes>
             
-            <class  name="Scenario_Component.ScenarioSearch" />
-            <class  name="Scenario_Component.ScenarioBuy" />
+            <class  name="scenario_Component.ScenarioSearch" />
+            <class  name="scenario_Component.ScenarioBuy" />
     
        </classes>
     </test> <!-- Test -->

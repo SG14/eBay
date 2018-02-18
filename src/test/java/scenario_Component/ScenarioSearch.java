@@ -31,7 +31,7 @@ public class ScenarioSearch extends BaseClass {
 
 	
 	//Method for Buying the item
-		@Test(dataProvider="dp_validSearch",dataProviderClass=dataProvider_Component.DataProviderSearch.class)
+		@Test(dataProvider="dp_validSearch",dataProviderClass=dataProvider_Component.DataProviderSearch.class,groups={"eBay"})
 		public void testValidSearch(Map search) throws Exception
 		{
 			
@@ -80,7 +80,7 @@ public class ScenarioSearch extends BaseClass {
 	{
 		//Actual result is checked with Expected result from Excel sheet
 		
-		
+		snapshot1(testCaseId, driver);
 		
 		try{
 			Assert.assertEquals(actualCount, expectedCount, "Expected result = "+ expectedCount +" and Actual result =" + actualCount +", Hence Fail");

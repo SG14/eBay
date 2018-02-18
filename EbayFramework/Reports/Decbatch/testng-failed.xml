@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Decbatch]">
+  <test name="RegSet1(failed)">
+    <groups>
+      <run>
+        <include name="eBay"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="scenario_Component.ScenarioSearch">
+        <methods>
+          <include name="testValidSearch" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- scenario_Component.ScenarioSearch -->
+    </classes>
+  </test> <!-- RegSet1(failed) -->
+</suite> <!-- Failed suite [Decbatch] -->

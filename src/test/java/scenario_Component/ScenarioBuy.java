@@ -31,7 +31,7 @@ public class ScenarioBuy extends BaseClass{
 
 	
 	//Method for Buying the item
-	@Test(dataProvider="dp_BuyNow",dataProviderClass=dataProvider_Component.DataProviderBuy.class)
+	@Test(dataProvider="dp_BuyNow",dataProviderClass=dataProvider_Component.DataProviderBuy.class,groups={"eBay"})
 	public void testBuyNow(Map buy) throws InterruptedException, IOException
 	{
 		//Collecting the data from the Map
